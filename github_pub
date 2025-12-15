@@ -1,0 +1,21 @@
+manoj@CHQS-J83DFY3:~/temp$ cat ~/.gitconfig
+[color]
+ui = auto
+[user]
+name = <Manoj Bhatta>
+        email = mkbhatta@gmail.com
+
+[https]
+        sslverify = false
+
+[ssh]
+        variant = ssh
+        identity = ~/.ssh/github_public
+
+
+[url "https://mkbhatta@github.com/rdkcentral"]
+    insteadOf = "https://github.com/rdkcentral"
+    insteadOf = "ssh://github.com/rdkcentral"
+    insteadOf = "ssh://git@github.com/rdkcentral"
+    insteadOf = "git@github.com:rdkcentral"
+    insteadOf = "github.com:rdkcentral"
