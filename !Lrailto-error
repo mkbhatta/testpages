@@ -1,0 +1,9 @@
+| /home/manoj/Projcts/L1L2/entservices-infra/entservices-infra/../entservices-infra/RuntimeManager/RialtoConnector.h:37:50: error: expected class-name before ‘,’ token
+|    37 |     class RialtoConnector : public IStateObserver, public std::enable_shared_from_this<RialtoConnector>
+|       |                                                  ^
+| /home/manoj/Projcts/L1L2/entservices-infra/entservices-infra/../entservices-infra/RuntimeManager/RialtoConnector.h:43:65: error: ‘RialtoServerStates’ does not name a type
+|    43 |         bool waitForStateChange(const std::string &appid, const RialtoServerStates &state, int timeoutMillis);
+|       |                                                                 ^~~~~~~~~~~~~~~~~~
+| /home/manoj/Projcts/L1L2/entservices-infra/entservices-infra/../entservices-infra/RuntimeManager/RialtoConnector.h:49:59: error: ‘RialtoServerStates’ does not name a type
+|    49 |         void stateChanged(const std::string &appId, const RialtoServerStates &state) override;
+|       |                                                           ^~~~~~~~~~~~~~~~~~
