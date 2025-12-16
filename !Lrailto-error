@@ -1,3 +1,27 @@
+
+ests/test_RunTimeManager.cpp.o -c /home/manoj/Projcts/L1L2/entservices-infra/entservices-infra/Tests/L1Tests/tests/test_RunTimeManager.cpp
+| In file included from /home/manoj/Projcts/L1L2/entservices-infra/entservices-infra/../entservices-infra/RuntimeManager/RuntimeManagerImplementation.h:41,
+|                  from /home/manoj/Projcts/L1L2/entservices-infra/entservices-infra/Tests/L1Tests/tests/test_RunTimeManager.cpp:23:
+| /home/manoj/Projcts/L1L2/entservices-infra/entservices-infra/../entservices-infra/RuntimeManager/RialtoConnector.h:37:50: error: expected class-name before ‘,’ token
+|    37 |     class RialtoConnector : public IStateObserver, public std::enable_shared_from_this<RialtoConnector>
+|       |                                                  ^
+| /home/manoj/Projcts/L1L2/entservices-infra/entservices-infra/../entservices-infra/RuntimeManager/RialtoConnector.h:58:25: error: ‘IServerManagerService’ was not declared in this scope
+|    58 |         std::unique_ptr<IServerManagerService> mServerManagerService ;
+|       |                         ^~~~~~~~~~~~~~~~~~~~~
+| /home/manoj/Projcts/L1L2/entservices-infra/entservices-infra/../entservices-infra/RuntimeManager/RialtoConnector.h:58:46: error: template argument 1 is invalid
+|    58 |         std::unique_ptr<IServerManagerService> mServerManagerService ;
+|       |                                              ^
+| /home/manoj/Projcts/L1L2/entservices-infra/entservices-infra/../entservices-infra/RuntimeManager/RialtoConnector.h:58:46: error: template argument 2 is invalid
+| /home/manoj/Projcts/L1L2/entservices-infra/entservices-infra/../entservices-infra/RuntimeManager/RialtoConnector.h:49:14: error: ‘void WPEFramework::RialtoConnector::stateChanged(const string&, const RialtoServerStates&)’ marked ‘override’, but does not override
+|    49 |         void stateChanged(const std::string &appId, const RialtoServerStates &state) override;
+|       |              ^~~~~~~~~~~~
+| /home/manoj/Projcts/L1L2/entservices-infra/entservices-infra/Tests/L1Tests/tests/test_RunTimeManager.cpp: In member function ‘bool RuntimeManagerTest::createResources()’:
+| /home/manoj/Projcts/L1L2/entservices-infra/entservices-infra/Tests/L1Tests/tests/test_RunTimeManager.cpp:77:34: error: invalid new-expression of abstract class type ‘testing::NiceMock<WindowManagerMock>’
+|    77 |         mWindowManagerMock = new NiceMock<WindowManagerMock>;
+
+
+
+------------
 | /home/manoj/Projcts/L1L2/entservices-infra/entservices-infra/../entservices-infra/RuntimeManager/RialtoConnector.h:37:50: error: expected class-name before ‘,’ token
 |    37 |     class RialtoConnector : public IStateObserver, public std::enable_shared_from_this<RialtoConnector>
 |       |                                                  ^
