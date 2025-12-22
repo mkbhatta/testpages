@@ -123,7 +123,7 @@ jobs:
         with:
           repository: rdkcentral/entservices-testframework
           path: entservices-testframework
-          ref: topic/RDKEMW-7329
+          ref: topic/RDKEMW7329
             #  token: ${{ secrets.RDKCM_RDKE }}
 
       - name: Checkout entservices-infra
@@ -367,6 +367,7 @@ jobs:
           -DTHUNDER_VERSION_MAJOR=4
           -DTHUNDER_VERSION_MINOR=4
           -DRDK_SERVICES_L1_TEST
+          -DRIALTO_IN_DAC_FEATURE_ENABLED
           -I $GITHUB_WORKSPACE/entservices-testframework/Tests/headers
           -I $GITHUB_WORKSPACE/entservices-testframework/Tests/headers/audiocapturemgr
           -I $GITHUB_WORKSPACE/entservices-testframework/Tests/headers/rdk/ds
@@ -392,6 +393,7 @@ jobs:
           -include $GITHUB_WORKSPACE/entservices-testframework/Tests/mocks/wpa_ctrl_mock.h
           -include $GITHUB_WORKSPACE/entservices-testframework/Tests/mocks/readprocMockInterface.h
           -include $GITHUB_WORKSPACE/entservices-testframework/Tests/mocks/gdialservice.h
+          -include $GITHUB_WORKSPACE/entservices-testframework/Tests/mocks/rialto.h
           --coverage
           -Wall -Wno-unused-result -Wno-deprecated-declarations -Wno-error=format=
           -Wl,-wrap,system -Wl,-wrap,popen -Wl,-wrap,syslog -Wl,-wrap,v_secure_system -Wl,-wrap,v_secure_popen -Wl,-wrap,v_secure_pclose -Wl,-wrap,unlink -Wl,-wrap,v_secure_system -Wl,-wrap,pclose -Wl,-wrap,setmntent -Wl,-wrap,getmntent
@@ -504,6 +506,7 @@ jobs:
           -DPLUGIN_MIGRATION=ON
           -DPLUGIN_DOWNLOADMANAGER=ON
           -DPLUGIN_PREINSTALL_MANAGER=ON
+          -DPLUGIN_PACKAGE_MANAGER=ON
           -DENABLE_UNIT_TESTS=ON
           &&
           cmake --build build/entservices-infra -j8
@@ -526,6 +529,7 @@ jobs:
           -DTHUNDER_VERSION_MAJOR=4
           -DTHUNDER_VERSION_MINOR=4
           -DRDK_SERVICES_L1_TEST
+          -DRIALTO_IN_DAC_FEATURE_ENABLED
           -I $GITHUB_WORKSPACE/entservices-testframework/Tests/headers
           -I $GITHUB_WORKSPACE/entservices-testframework/Tests/headers/audiocapturemgr
           -I $GITHUB_WORKSPACE/entservices-testframework/Tests/headers/rdk/ds
@@ -552,6 +556,7 @@ jobs:
           -include $GITHUB_WORKSPACE/entservices-testframework/Tests/mocks/wpa_ctrl_mock.h
           -include $GITHUB_WORKSPACE/entservices-testframework/Tests/mocks/readprocMockInterface.h
           -include $GITHUB_WORKSPACE/entservices-testframework/Tests/mocks/gdialservice.h
+          -include $GITHUB_WORKSPACE/entservices-testframework/Tests/mocks/rialto.h
           --coverage
           -Wall -Wno-unused-result -Wno-deprecated-declarations -Wno-error=format=
           -Wl,-wrap,system -Wl,-wrap,popen -Wl,-wrap,syslog -Wl,--no-as-needed
@@ -591,6 +596,7 @@ jobs:
           -DPLUGIN_MIGRATION=ON
           -DPLUGIN_DOWNLOADMANAGER=ON
           -DPLUGIN_PREINSTALL_MANAGER=ON
+          -DPLUGIN_PACKAGE_MANAGER=ON
           -DENABLE_UNIT_TESTS=ON
           &&
           cmake --build build/entservices-testframework -j8
