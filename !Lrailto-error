@@ -1,3 +1,12 @@
+
+          -include $GITHUB_WORKSPACE/entservices-testframework/Tests/mocks/rialto.h
+
+          headers/rialto
+
+          rialto/ServerManagerServiceFactory.h
+
+----
+
 | -- Build files have been written to: /home/manoj/Projcts/L1L2/entservices-infra/build/entservices-testframework
 [2/2] Linking CXX executable Tests/L1Tests/RdkServicesL1Test
 | FAILED: Tests/L1Tests/RdkServicesL1Test 
